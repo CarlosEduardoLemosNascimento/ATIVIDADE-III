@@ -75,7 +75,8 @@ from sqlalchemy import create_engine, Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-Base = declarative_base()
+# Importação corrigida
+Base = sqlalchemy.orm.declarative_base()
 
 # Definição da classe que representa a tabela de usuários
 class Usuario(Base):
