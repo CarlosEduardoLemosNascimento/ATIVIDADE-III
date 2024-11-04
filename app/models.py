@@ -11,8 +11,8 @@ class Usuario(Base):
     senha = Column(String(100), nullable=False)
 
 def criar_tabela():
-    # Substitua 'mysql+pymysql://user:password@localhost/meu_banco' pelos seus detalhes de conexão
-    engine = create_engine('mysql+pymysql://user:password@localhost/meu_banco')
+    
+    engine = create_engine('mysql+pymysql://user:user_password@localhost/meu_banco')
     Base.metadata.create_all(engine)
 
 def main():
