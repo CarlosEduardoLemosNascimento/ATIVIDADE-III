@@ -15,11 +15,6 @@ services:
     networks:
       - app_network
 
-    volumes:
-      db_data:
-
-    networks:
-      app_network:
   app:
     build: .
     ports:
