@@ -13,13 +13,13 @@ db_name = "meu_banco"
 DATABASE_URL = f"mysql+pymysql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}"
 
 # Conectando ao banco de dados.
-db = create_engine(DATABASE_URL)
-Session = sessionmaker(bind=db)
+engine = create_engine(DATABASE_URL)
+SessionLocal = sessionmaker(bind=engine)
 
 # Gerenciando sessão.
 @contextmanager
 def get_db():
-    db_session = Session()
+    db_session = SessionLocal()
     try:
         yield db_session
         db_session.commit()  # Se der certo, faz commit.
