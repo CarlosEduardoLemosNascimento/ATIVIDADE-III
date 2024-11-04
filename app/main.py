@@ -3,7 +3,7 @@ from database import db
 from crud import adicionar_usuario, listar_usuarios, pesquisar_usuario, atualizar_usuario, excluir_usuario
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:root@db/senaisolution'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://user:user_password@db/meu_banco'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 
