@@ -1,5 +1,5 @@
-from .usuario_repository import UsuarioRepository
-from .database import get_db
+from usuario_repository import UsuarioRepository
+from database import get_db
 
 class UsuarioService:
     def __init__(self):
