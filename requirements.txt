@@ -1,2 +1,0 @@
-SQLAlchemy
-mysql-connector-python
