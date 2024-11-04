@@ -1,4 +1,4 @@
-from services.usuario_service import UsuarioService
+from usuario_service import UsuarioService
 from database import get_db
 
 def main():
