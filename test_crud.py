@@ -8,7 +8,7 @@ class TestCRUD(unittest.TestCase):
     def setUpClass(cls):
         cls.app = app
         cls.app.config['TESTING'] = True
-        cls.app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:root@db/senaisolution'
+        cls.app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:root@db/app'
         cls.client = cls.app.test_client()
         with cls.app.app_context():
             db.create_all()
