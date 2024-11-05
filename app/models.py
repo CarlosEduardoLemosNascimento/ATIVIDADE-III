@@ -1,3 +1,4 @@
+# models.py
 from sqlalchemy import create_engine, Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
@@ -11,13 +12,6 @@ class Usuario(Base):
     senha = Column(String(100), nullable=False)
 
 def criar_tabela():
-    
+    # Cria a tabela no banco de dados
     engine = create_engine('mysql+pymysql://user:user_password@localhost/meu_banco')
     Base.metadata.create_all(engine)
-
-def main():
-    # Chama a função para criar a tabela
-    criar_tabela()
-    
-
-    print("Tabela criada com sucesso!")

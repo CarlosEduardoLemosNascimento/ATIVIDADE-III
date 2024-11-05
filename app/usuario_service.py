@@ -1,3 +1,4 @@
+# usuario_service.py
 from sqlalchemy.orm import Session
 from app.usuario_repository import UsuarioRepository
 
@@ -5,8 +6,8 @@ class UsuarioService:
     def __init__(self):
         self.repository = None
 
-    def set_repository(self, session: Session):
-        self.repository = UsuarioRepository(session)
+    def set_repository(self, repository: UsuarioRepository):
+        self.repository = repository
 
     def validar_dados(self, nome: str, email: str, senha: str):
         if not nome or not email or not senha:

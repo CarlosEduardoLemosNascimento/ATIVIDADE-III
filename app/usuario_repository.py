@@ -1,6 +1,6 @@
+# usuario_repository.py
 from sqlalchemy.orm import Session
 from app.models import Usuario
-from app.database import get_db
 
 class UsuarioRepository:
     def __init__(self, session: Session):
